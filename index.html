@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>生态批评视域下的菲利普·拉金作品解读 | yg2224</title>
+    <meta name="author" content="yg2224">
+    <meta name="description" content="生态批评视域下的菲利普·拉金作品解读 | 由yg2224创建的研究网站">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3a6351;
+            --accent-color: #6d9773;
+            --light-color: #f8f9fa;
+            --dark-color: #212529;
+            --font-main: 'Noto Serif SC', serif;
+            --font-heading: 'Noto Sans SC', sans-serif;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: var(--font-main);
+            line-height: 1.6;
+            color: var(--dark-color);
+            background-color: #f5f5f5;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        
+        header {
+            background-color: var(--primary-color);
+            color: var(--light-color);
+            padding: 2rem 0;
+            text-align: center;
+        }
+        
+        .site-title {
+            font-family: var(--font-heading);
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .subtitle {
+            font-style: italic;
+            font-size: 1.2rem;
+        }
+        
+        nav {
+            background-color: var(--secondary-color);
+            padding: 1rem 0;
+        }
+        
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style-type: none;
+            gap: 2rem;
+        }
+        
+        nav a {
+            color: var(--light-color);
+            text-decoration: none;
+            font-family: var(--font-heading);
+            font-weight: 500;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+        
+        nav a:hover {
+            color: #ddd;
+        }
+        
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            flex: 1;
+        }
+        
+        .hero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 3rem;
+            padding: 2rem;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .hero-image {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 1.5rem;
+            border: 5px solid var(--accent-color);
+        }
+        
+        .hero-title {
+            font-family: var(--font-heading);
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+        
+        .hero-text {
+            text-align: center;
+            max-width: 800px;
+            margin-bottom: 1.5rem;
+        }
+        
+        .featured-section {
+            margin-bottom: 3rem;
+        }
+        
+        .section-title {
+            font-family: var(--font-heading);
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: var(--secondary-color);
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--accent-color);
+        }
+        
+        .cards-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .card-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .card-content {
+            padding: 1.5rem;
+        }
+        
+        .card-title {
+            font-family: var(--font-heading);
+            font-size: 1.3rem;
+            margin-bottom: 0.8rem;
+            color: var(--primary-color);
+        }
+        
+        .card-text {
+            margin-bottom: 1rem;
+            color: #555;
+        }
+        
+        .read-more {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: white;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            border-radius: 4px;
+            font-family: var(--font-heading);
+            font-weight: 500;
+            transition: background-color 0.3s;
+        }
+        
+        .read-more:hover {
+            background-color: var(--secondary-color);
+        }
+        
+        .about-section {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            margin-bottom: 3rem;
+        }
+        
+        .about-content {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+        
+        .about-image {
+            flex: 1;
+            max-width: 300px;
+        }
+        
+        .about-text {
+            flex: 2;
+        }
+        
+        .about-text p {
+            margin-bottom: 1rem;
+        }
+        
+        .poem {
+            margin: 2rem 0;
+            padding: 1.5rem;
+            background-color: #f9f9f9;
+            border-left: 4px solid var(--accent-color);
+        }
+        
+        .poem h3 {
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+        
+        .poem p {
+            font-style: italic;
+            margin-bottom: 0.5rem;
+        }
+        
+        .poem .analysis {
+            font-style: normal;
+            margin-top: 1rem;
+            color: #555;
+        }
+        
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+        
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: var(--accent-color);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+        }
+        
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            width: 50%;
+            box-sizing: border-box;
+        }
+        
+        .timeline-item:nth-child(odd) {
+            left: 0;
+        }
+        
+        .timeline-item:nth-child(even) {
+            left: 50%;
+        }
+        
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            right: -12px;
+            background-color: white;
+            border: 4px solid var(--accent-color);
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+        
+        .timeline-item:nth-child(even)::after {
+            left: -12px;
+        }
+        
+        .timeline-content {
+            padding: 20px;
+            background-color: white;
+            position: relative;
+            border-radius: 6px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .timeline-date {
+            font-weight: bold;
+            color: var(--secondary-color);
+            margin-bottom: 10px;
+        }
+        
+        .research-item {
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .research-item h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        .research-item .meta {
+            font-size: 0.9rem;
+            color: #777;
+            margin-bottom: 0.5rem;
+        }
+        
+        .team-members {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .team-member {
+            background-color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        
+        .team-member-image {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 1rem;
+            border: 3px solid var(--accent-color);
+        }
+        
+        .team-member h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        .team-member p {
+            font-size: 0.9rem;
+            color: #555;
+        }
+        
+        .resource-links {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .resource-links li {
+            margin-bottom: 1rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        
+        .resource-links li::before {
+            content: "•";
+            color: var(--accent-color);
+            font-size: 1.5rem;
+            position: absolute;
+            left: 0;
+            top: -5px;
+        }
+        
+        .resource-links a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .resource-links a:hover {
+            color: var(--primary-color);
+            text-decoration: underline;
+        }
+        
+        footer {
+            background-color: var(--primary-color);
+            color: var(--light-color);
+            padding: 2rem;
+            text-align: center;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .footer-links {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .footer-links a {
+            color: var(--light-color);
+            text-decoration: none;
+        }
+        
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+        
+        .footer-info {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        
+        /* AI Assistant Floating Button */
+        .ai-assistant {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 70px;
+            height: 70px;
+            background-color: var(--accent-color);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+            cursor: pointer;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+        
+        .ai-assistant:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 16px rgba(0,0,0,0.3);
+        }
+        
+        .ai-assistant-icon {
+            width: 40px;
+            height: 40px;
+            fill: white;
+        }
+        
+        .ai-assistant-pulse {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background-color: rgba(109, 151, 115, 0.4);
+            animation: pulse 2s infinite;
+            pointer-events: none;
+        }
+        
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                opacity: 0.7;
+            }
+            70% {
+                transform: scale(1.3);
+                opacity: 0;
+            }
+            100% {
+                transform: scale(1.3);
+                opacity: 0;
+            }
+        }
+        
+        /* Scroll Reveal Animation */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+        
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+            }
+            
+            .about-content {
+                flex-direction: column;
+            }
+            
+            .about-image {
+                max-width: 100%;
+            }
+            
+            .timeline::after {
+                left: 31px;
+            }
+            
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+            
+            .timeline-item:nth-child(even) {
+                left: 0;
+            }
+            
+            .timeline-item::after {
+                left: 18px;
+                right: auto;
+            }
+            
+            .ai-assistant {
+                width: 60px;
+                height: 60px;
+                bottom: 20px;
+                right: 20px;
+            }
+            
+            .ai-assistant-icon {
+                width: 35px;
+                height: 35px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="site-title">生态批评视域下的菲利普·拉金作品解读</h1>
+        <p class="subtitle">Ecological Criticism of Philip Larkin's Works | yg2224</p>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#home">首页</a></li>
+            <li><a href="the-whitsun-weddings.html">诗歌解析</a></li>
+            <li><a href="ecocriticism-core-concepts.html">生态批评</a></li>
+            <li><a href="#research">研究成果</a></li>
+            <li><a href="https://www.fx361.com/page/2017/0306/18355067.shtml">相关资源</a></li>
+            <li><a href="about.html">关于</a></li>
+        </ul>
+    </nav>
+    
+    <main id="home">
+        <section class="hero">
+            <img src="image/1.jpg" alt="Philip Larkin" class="hero-image">
+            <h2 class="hero-title">探索拉金诗歌中的自然与生态意识</h2>
+            <p class="hero-text">菲利普·拉金（Philip Larkin, 1922-1985）作为20世纪英国最具影响力的诗人之一，其作品中蕴含着丰富的自然意象与生态思考。本网站通过生态批评视角，深入探讨拉金诗歌中的人与自然关系、环境意识以及其对现代工业文明的反思，揭示拉金诗歌创作中被忽视的生态维度。</p>
+            <a href="#ecocriticism" class="read-more">了解更多</a>
+        </section>
+        
+        <section class="featured-section reveal" id="poetry-analysis">
+            <h2 class="section-title">经典诗作的生态解读</h2>
+            <div class="cards-container">
+                <div class="card">
+                    <img src="image/2.jpg" alt="The Whitsun Weddings" class="card-image">
+                    <div class="card-content">
+                        <h3 class="card-title">《五旬节婚礼》中的自然与工业景观</h3>
+                        <p class="card-text">探讨拉金如何通过火车窗外的风景描绘，呈现英国乡村自然景观与工业化进程的复杂交织，反映出现代性对传统生态环境的改变。</p>
+                        <a href="the-whitsun-weddings.html" class="read-more">阅读分析</a>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <img src="image/3.jpg" alt="The Trees" class="card-image">
+                    <div class="card-content">
+                        <h3 class="card-title">《树木》：自然生命力与人类存在的反思</h3>
+                        <p class="card-text">解读拉金如何通过树木的季节性更新，思考自然循环与人类有限生命之间的对比，展现其独特的生态哲学思考。</p>
+                        <a href="the-trees-analysis.html" class="read-more">阅读分析</a>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <img src="image/4.jpg" alt="Going, Going" class="card-image">
+                    <div class="card-content">
+                        <h3 class="card-title">《渐行渐远》：失落的英国乡村景观</h3>
+                        <p class="card-text">分析拉金对英国乡村景观逐渐消失的担忧，批判工业化与城市扩张对自然环境的破坏，体现拉金独特的生态忧患意识。</p>
+                        <a href="going-going-analysis.html" class="read-more">阅读分析</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="poem reveal">
+                <h3>"The Trees"（《树木》）</h3>
+                <p>The trees are coming into leaf</p>
+                <p>Like something almost being said;</p>
+                <p>The recent buds relax and spread,</p>
+                <p>Their greenness is a kind of grief.</p>
+                <p class="analysis">这首诗通过描绘春季树木发芽的景象，探讨了自然循环与人类生命的关系。拉金将树木的更新与人类的衰老形成对比，体现了他对自然生态系统与人类生命周期的复杂思考。诗中"绿色是一种悲伤"的表述，揭示了拉金对自然美感与生命短暂性的矛盾感受。</p>
+            </div>
+            
+            <div class="poem reveal">
+                <h3>"Going, Going"（《渐行渐远》）</h3>
+                <p>I thought it would last my time -</p>
+                <p>The sense that, beyond the town,</p>
+                <p>There would always be fields and farms...</p>
+                <p class="analysis">这首诗直接表达了拉金对英国乡村景观逐渐消失的担忧，批判了工业化与城市扩张对自然环境的破坏。诗中充满对传统乡村生活的怀念与对现代发展模式的质疑，体现了拉金独特的生态忧患意识。</p>
+            </div>
+        </section>
+        
+        <section class="featured-section reveal" id="ecocriticism">
+            <h2 class="section-title">生态批评理论框架</h2>
+            <div class="cards-container">
+                <div class="card">
+                    <img src="image/5.jpg" alt="Ecocriticism Theory" class="card-image">
+                    <div class="card-content">
+                        <h3 class="card-title">生态批评的核心概念</h3>
+                        <p class="card-text">生态批评（Ecocriticism）是20世纪90年代兴起的文学批评方法，旨在探讨文学作品中的环境意识与自然表征。将生态批评视角应用于拉金诗歌研究，能够揭示其作品中被传统批评所忽视的生态思考维度。</p>
+                        <a href="ecocriticism-core-concepts.html" class="read-more">了解更多</a>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <img src="image/6.jpg" alt="Nature in Literature" class="card-image">
+                    <div class="card-content">
+                        <h3 class="card-title">英国诗歌传统中的自然观</h3>
+                        <p class="card-text">梳理从浪漫主义到现代主义的英国诗歌传统中的自然表现，分析拉金在这一传统中的继承与创新，探讨其作品与英国田园诗传统的关系以及对现代城市化的批判。</p>
+                        <a href="british-poetry-nature-tradition.html" class="read-more">了解更多</a>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <img src="image/7.jpg" alt="Modern Ecology" class="card-image">
+                    <div class="card-content">
+                        <h3 class="card-title">现代生态危机与文学反思</h3>
+                        <p class="card-text">探讨20世纪工业化、现代性与生态危机的关系，以及拉金诗歌中对这些问题的隐晦回应与批判。分析拉金如何通过诗歌表达对环境恶化的担忧和对自然消逝的悲叹。</p>
+                        <a href="modern-ecology-literature.html" class="read-more">了解更多</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="about-section reveal">
+                <h3>拉金诗歌中的生态意识表现</h3>
+                <div class="about-text">
+                    <p><strong>1. 自然意象的象征性使用</strong>：拉金诗歌中的自然元素（如树木、天空、鸟类）常常超越纯粹的背景描写，承载着复杂的情感与哲学思考。</p>
+                    <p><strong>2. 城乡二元对立</strong>：拉金作品中频繁出现城市与乡村的对比，反映了现代化进程中人与自然关系的变化。</p>
+                    <p><strong>3. 隐含的环境批判</strong>：尽管拉金很少直接表达政治立场，但其诗歌中对工业化景观的描写常带有批判性的底色。</p>
+                    <p><strong>4. 存在主义与生态思考的融合</strong>：拉金将对死亡与时间的思考与自然循环相联系，形成独特的生态存在主义视角。</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="featured-section reveal" id="research">
+            <h2 class="section-title">研究内容与方法</h2>
+            
+            <div class="about-section">
+                <div class="about-text">
+                    <p>拉金生前正式出版的诗集有四本，即《北方船》（The North Ship，1945）、《较少受骗者》（The Less Deceived，1955）、《降灵节婚礼》（The Whitsun Weddings，1964）和《高窗》（High Windows，1971）。拉金将自然的顽强与脆弱交织在这些诗歌中，自然的坚强体现在万物成长生存过程中的灾病困顿与艰辛步履，而自然的脆弱则表现在动物被人类利用技术手段无止境地掠夺和压榨的生存境况。</p>
+                    
+                    <p>本研究主要从以下几个方面展开：</p>
+                    
+                    <p><strong>1. 四季景色研究</strong>：全面分析研究菲利普·拉金文学作品中的自然景色描写，具体以拉金诗集中的典型的四季景色描写为例，包括诗《冬的夜景》（Winter Nocturne），《夏日夜曲》(Summer Nocturne)，《来临》（Coming），挽歌《四月的星期天带来了雪》（An April Sunday brings the snow），长诗《生者之桥》（Bridge for the living）等。</p>
+                    
+                    <p><strong>2. 动物伦理研究</strong>：通过对拉金各个时期文学作品中所体现的动物伦理和道德的研读，探究生活、成长于二战前后的拉金笔下对于人类与自然关系的理解与表现。</p>
+                    
+                    <p><strong>3. 非田园意象研究</strong>：重点研究菲利普·拉金诗文中非田园意象的生态解读，以及其生态思想的变迁历程与阶段特征。田园思想是生态批评中的一个主流，本课题重在探索拉金诗文中非田园的自然描写所体现的生态思想。</p>
+                </div>
+            </div>
+            
+            <h3 class="section-title">研究方法</h3>
+            <div class="about-section">
+                <div class="about-text">
+                    <p><strong>1. 对比欣赏法</strong>：一方面，就各个时期的拉金文学作品进行对比欣赏，探讨其对于同一意象在不同时代背景下的不同感受，如对比《少女在冬季》（A Girl in Winter）与其口号诗《雪覆盖了我们的足迹》（Snow has covered up our track）二者中人类角色对于自然力量的被动与主动态度之别。另一方面，就拉金文学中对四季景象描写的不同和相应的不同情感表达进行分析。</p>
+                    
+                    <p><strong>2. 背景分析法</strong>：探求在特定的历史时代背景下拉金的生态观在文学作品中的体现，比如《生者之桥》（Bridge for the living）与亨伯桥的建成始末的关系与影响。</p>
+                    
+                    <p><strong>3. 艺术分析法</strong>：对诗歌内在的艺术性，如修辞手法、意象的选择和不同季节意境的营构进行探索。</p>
+                </div>
+            </div>
+            
+            <h3 class="section-title">研究进度</h3>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">2024年5月—2024年10月</div>
+                        <h4>项目设计及准备阶段</h4>
+                        <p>成员进行调研，收集资料，完成项目规划。通过自主申报，指导教师审核，学院评审推荐、学校复核等过程，推动项目立项。</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">2024年11月—2025年4月</div>
+                        <h4>项目实施及中期检查阶段</h4>
+                        <p>查找资料，深入阅读菲利普·拉金的文学作品，展开调研，分析拉金文学作品中体现的生态观，探索拉金文学思想与生态理念。</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">2025年5月—2025年10月</div>
+                        <h4>项目实施及总结阶段</h4>
+                        <p>总结第二阶段的工作，分析项目在实施过程中的不足之处，并找到改进方法，整理、补充相关材料和调研成果。</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">2025年11月—2026年4月</div>
+                        <h4>项目结题阶段</h4>
+                        <p>对本课题进行总结，完成结题报告，项目组成员协作完成论文的撰写。</p>
+                    </div>
+                </div>
+            </div>
+            
+            <h3 class="section-title">研究成果</h3>
+            <div class="cards-container">
+                <div class="card">
+                    <img src="image/8.jpg" alt="Academic Paper" class="card-image">
+                    <div class="card-content">
+                        <h3 class="card-title">论文：《拉金诗歌中的自然意象与生态忧思》</h3>
+                        <p class="card-text">本研究通过对拉金主要诗集的文本细读，梳理其作品中的自然意象系统，探讨这些意象如何表达诗人对现代生态问题的隐忧。</p>
+                        <a href="research-abstracts.html#paper" class="read-more">查看摘要</a>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <img src="image/8.jpg" alt="Conference" class="card-image">
+                    <div class="card-content">
+                        <h3 class="card-title">会议论文：《失落的田园：拉金与战后英国乡村景观的变迁》</h3>
+                        <p class="card-text">本文考察拉金诗歌如何反映二战后英国乡村景观的变化，以及这些变化与现代工业文明、城市化进程的关系。</p>
+                        <a href="research-abstracts.html#conference" class="read-more">查看摘要</a>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <img src="image/8.jpg" alt="Comparative Study" class="card-image">
+                    <div class="card-content">
+                        <h3 class="card-title">比较研究：《拉金与泰德·休斯的生态诗学比较》</h3>
+                        <p class="card-text">通过比较拉金与同时代诗人泰德·休斯的作品，探讨两位诗人不同的生态观念及其在诗歌创作中的表现方式。</p>
+                        <a href="research-abstracts.html#comparative" class="read-more">查看摘要</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="about-section reveal" id="about">
+            <h2 class="section-title">关于本项目</h2>
+            <div class="about-content">
+                <img src="image/1.jpg" alt="Research Project" class="about-image">
+                <div class="about-text">
+                    <p>本项目是"生态批评视域下的菲利普·拉金作品解读"大学生创新训练项目的在线展示平台。我们试图通过生态批评的视角重新审视拉金的诗歌创作，发掘其中被传统批评所忽视的生态维度与环境意识。</p>
+                    
+                    <p>研究目的：</p>
+                    <p>1. 通过对拉金作品的研读，探讨作者的生态意识与生态理念，明确拉金（各个时期）对于自然与人类的关系的态度，并进一步深究这一态度形成的原因及其对当代生态文明思潮的意义与影响。</p>
+                    <p>2. 本课题遵循生态批评的宗旨，旨在探讨菲利普·拉金诗文作品中的生态内涵。具体而言，本课题旨在以拉金文学中对于不同季节景象的描写以及动物伦理与道德的体现为研究对象，通过其诗文中人类与自然、城市与乡村、被动与主动的对比探讨拉金作品所体现的生态观。</p>
+                </div>
+            </div>
+            
+            <h3 class="section-title">项目团队</h3>
+            <div class="team-members">
+                <div class="team-member">
+                    <img src="image/s.jpg" alt="沈景红" class="team-member-image">
+                    <h3>沈景红</h3>
+                    <p>本项目主要负责人，负责制定研究计划，撰写研究方案，拟写研究对象、研究方式。负责部分论文撰写；负责学习研究菲利普·拉金生态思想的阶段性变化。</p>
+                </div>
+                
+                <div class="team-member">
+                    <img src="image/y.jpg" alt="颜乐" class="team-member-image">
+                    <h3>颜乐</h3>
+                    <p>负责学习研究生态批评理论和反人类中心主义理论；负责部分论文撰写。</p>
+                </div>
+                
+                <div class="team-member">
+                    <img src="image/yl.jpg" alt="岳岚" class="team-member-image">
+                    <h3>岳岚</h3>
+                    <p>负责查阅相关资料，深入研究菲利普·拉金的诗集，撰写论文报告。</p>
+                </div>
+                
+                <div class="team-member">
+                    <img src="image/p.jpg" alt="卜远立" class="team-member-image">
+                    <h3>卜远立</h3>
+                    <p>负责阅读并研究菲利普·拉金的作品，学习并分析其中体现的动物伦理道德。</p>
+                </div>
+            </div>
+            
+            <div class="about-text">
+                <h3>指导教师：杨汨</h3>
+                <p>课题指导教师在课题相关领域的理论和资料方面都已有丰厚的积累。课题负责人十多年来一直从事文学批评、当代英国文学和跨文化研究，曾在哈佛大学学习过相关课程和积累了大量资料。</p>
+                <p>指导教师在生态批评研究领域已发表多篇论文，包括《英国生态文学的发展和现状》（2010年）、《英国当代诗人史帝维·史密斯两首生态诗作的思想内涵解读》等。</p>
+            </div>
+        </section>
+        
+        <section class="featured-section reveal" id="resources">
+            <h2 class="section-title">相关资源</h2>
+            
+            <h3>拉金研究参考文献</h3>
+            <ul class="resource-links">
+                <li>吕爱晶.寻找英国的花园——菲利浦·拉金诗歌中的生态意识 [J].外国语文,2010,26(04):16-20.</li>
+                <li>肖云华.拉金眼里的大自然——以《空缺》为例解读拉金的存在观 [J].外国文学评论,2014(02):215-224.</li>
+                <li>曹莉群.建构自然：论菲利普·拉金、泰德·休斯和谢默斯·希尼的诗歌 [D].北京外国语大学,2016.</li>
+                <li>刘爱玲.菲利普·拉金诗歌中的生态伦理思想 [J].文教资料,2017(03):7-8.</li>
+                <li>姜慧玲.新物质主义视域下菲利普·拉金诗歌中的"生命共同体"意识 [J]. 当代外国文学, 2022</li>
+            </ul>
+            
+            <h3>生态批评理论资源</h3>
+            <div class="cards-container">
+                <div class="card">
+                    <img src="image/archive-database.svg" alt="Bibliography" class="card-image">
+                    <div class="card-content">
+                        <h3 class="card-title">拉金研究书目</h3>
+                        <p class="card-text">提供拉金研究的综合书目，包括生平传记、作品集、批评研究以及与生态批评相关的重要文献。</p>
+                        <a href="resource-center.html#bibliography" class="read-more">查看书目</a>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <img src="image/archive-database.svg" alt="Teaching Materials" class="card-image">
+                    <div class="card-content">
+                        <h3 class="card-title">教学资源</h3>
+                        <p class="card-text">为教师和学生提供拉金诗歌教学与学习的资源，包括教案、阅读指南和生态批评视角的分析方法。</p>
+                        <a href="resource-center.html#teaching" class="read-more">获取资源</a>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <img src="image/archive-database.svg" alt="Archives" class="card-image">
+                    <div class="card-content">
+                        <h3 class="card-title">档案与数据库</h3>
+                        <p class="card-text">收集与拉金相关的档案资料、数字化文本及其他研究资源的链接，方便研究者获取第一手资料。</p>
+                        <a href="resource-center.html#archives" class="read-more">访问资源</a>
+                    </div>
+                </div>
+            </div>
+            
+            <h3 class="section-title">拉金作品推荐</h3>
+            <div class="about-section">
+                <div class="about-text">
+                    <p><strong>《北方船》（The North Ship，1945）</strong> - 拉金的处女作诗集，展现了早期创作风格和对自然的独特感受。</p>
+                    <p><strong>《较少受骗者》（The Less Deceived，1955）</strong> - 奠定拉金诗人地位的成熟作品，包含多首反映其生态思考的代表作。</p>
+                    <p><strong>《降灵节婚礼》（The Whitsun Weddings，1964）</strong> - 最为广泛流传的诗集，通过英国乡村和城市景观的描绘，呈现人与自然的关系变化。</p>
+                    <p><strong>《高窗》（High Windows，1971）</strong> - 拉金生前最后一部诗集，包含更为深刻的生态哲学思考和对现代性的反思。</p>
+                    <p><strong>《少女在冬季》（A Girl in Winter，1947）</strong> - 小说作品，通过季节性景观描写表达对人类命运的思考。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- AI Assistant Floating Button -->
+    <a href="assistant.html" class="ai-assistant" id="ai-assistant" title="AI助手">
+        <div class="ai-assistant-pulse"></div>
+        <svg class="ai-assistant-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+            <path d="M12 6c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm2 9h-4v-1h4v1zm0-3H8v-1h6v1zm0-3h-2V7h2v2z"/>
+        </svg>
+    </a>
+    
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#about">关于我们</a>
+                <a href="contact.html">联系方式</a>
+                <a href="privacy.html">隐私政策</a>
+                <a href="sitemap.html">网站地图</a>
+            </div>
+            <p class="footer-info">© 2025 生态批评视域下的菲利普·拉金作品解读 | yg2224 | 所有权利保留</p>
+        </div>
+    </footer>
+
+    <script>
+        // Scroll Reveal Animation
+        function reveal() {
+            const reveals = document.querySelectorAll('.reveal');
+            
+            for (let i = 0; i < reveals.length; i++) {
+                const windowHeight = window.innerHeight;
+                const elementTop = reveals[i].getBoundingClientRect().top;
+                const elementVisible = 150;
+                
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add('active');
+                }
+            }
+        }
+        
+        window.addEventListener('scroll', reveal);
+        reveal(); // Trigger on page load
+        
+        // Navigation Smooth Scroll
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Hero "了解更多" button smooth scroll
+        document.querySelector('.hero .read-more').addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+            
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 100,
+                    behavior: 'smooth'
+                });
+            }
+        });
+        
+        // AI Assistant Modal
+        const aiAssistant = document.getElementById('ai-assistant');
+        
+        aiAssistant.addEventListener('click', function() {
+            alert('欢迎使用AI助手！\n\n您可以向我咨询有关菲利普·拉金和生态批评的问题。\n\n如何帮助您？');
+        });
+        
+        // Add interaction effects for AI assistant button
+        aiAssistant.addEventListener('mouseover', function() {
+            this.style.transform = 'scale(1.1)';
+        });
+        
+        aiAssistant.addEventListener('mouseout', function() {
+            this.style.transform = 'scale(1)';
+        });
+        
+        aiAssistant.addEventListener('touchstart', function() {
+            this.style.transform = 'scale(0.95)';
+        });
+        
+        aiAssistant.addEventListener('touchend', function() {
+            this.style.transform = 'scale(1)';
+        });
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
